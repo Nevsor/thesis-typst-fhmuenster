@@ -8,11 +8,11 @@
 #import "@preview/i-figured:0.2.4" 
 
 // Formatierung von Quelltexten
-#import "@preview/codly:1.0.0": codly, codly-init 
-#import "@preview/codly-languages:0.1.2": codly-languages 
+#import "@preview/codly:1.1.1": codly, codly-init 
+#import "@preview/codly-languages:0.1.3": codly-languages 
 
 // Umflossene Abbildungen, etc.
-#import "@preview/wrap-it:0.1.0": wrap-content 
+#import "@preview/wrap-it:0.1.1": wrap-content 
 
 // Latex-Logo
 #import "@preview/metalogo:1.0.2": LaTeX 
