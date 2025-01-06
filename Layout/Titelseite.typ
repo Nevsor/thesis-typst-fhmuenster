@@ -1,4 +1,5 @@
 #import "Typographie.typ": sans-font
+#import "../Abhängigkeiten.typ": oasis-align
 
 #let titelseite(
   bilder_oben: [],
@@ -18,7 +19,17 @@
 
   set align(right)
 
-  align(center)[#bilder_oben]
+  align(center,
+    if bilder_oben.len() == 1 {
+      bilder_oben.at(0)
+    }
+    else if bilder_oben.len() == 2 {
+      oasis-align(int-dir:-1,
+        bilder_oben.at(0),
+        bilder_oben.at(1)
+      )
+    }
+  )
 
   v(1fr)
 

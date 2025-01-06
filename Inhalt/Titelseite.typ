@@ -1,13 +1,14 @@
 #import "../Layout/titelseite.typ": titelseite
 #import "../Layout/Typographie.typ": datumsformat
-#import "../Metadaten.typ": abschluss, autor, matrikelnummer, titel, betreuer, korreferenten, ort, datum 
+#import "../Metadaten.typ": abschluss, autor, matrikelnummer, titel, betreuer, korreferenten, ort, datum, unternehmenslogo
+
+#let bilder_oben = (image("../Bilder/fhm_Logo_CMYK_30mm.svg", width: 66mm),)
+#if unternehmenslogo != none {
+  bilder_oben.push(image("../"+unternehmenslogo))
+}
 
 #show: titelseite.with(
-  bilder_oben: {
-    image("../Bilder/fhm_Logo_CMYK_30mm.svg", width: 66mm)
-    // Firmenlogo (optional)
-    // #image("Bilder/Unternehmenslogo.jpg", width: 55mm)
-  },
+  bilder_oben: bilder_oben,
   überschrift: [#abschluss;thesis],
   autor: autor,
   matrikelnummer: matrikelnummer,

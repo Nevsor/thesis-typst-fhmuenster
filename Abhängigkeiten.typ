@@ -22,3 +22,5 @@
 
 // Plots mit GnuPlot
 #import "@preview/neoplot:0.0.2"
+
+#import "@preview/oasis-align:0.2.0": *
